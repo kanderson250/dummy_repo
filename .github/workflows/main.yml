@@ -6,7 +6,7 @@ on:
 jobs:
   job_1:
     name: Generate and upload artifacts
-    runs-on: ubuntu_latest
+    runs-on: macos_latest
     steps:
       - name: Make downloads directory
         run: mkdir html_downloads
