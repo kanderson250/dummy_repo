@@ -1,12 +1,11 @@
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
 
 jobs:
   job_1:
     name: Generate and upload artifacts
-    runs-on: macos_latest
+    runs-on: ubuntu-latest
     steps:
       - name: Make downloads directory
         run: mkdir html_downloads
