@@ -1,0 +1,28 @@
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  job_1:
+    name: Generate and upload artifacts
+    runs-on: ubuntu_latest
+    steps:
+      - name: Make downloads directory
+        run: mkdir html_downloads
+      - name: Generate html files
+        run: |
+          cd html_downloads
+          echo 'This is the first file' > alpha.html
+          echo 'This is the second file' > beta.html
+          echo 'And this is the last file' > omega.html
+          cd .. 
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v2
+        with: 
+          name: assets_for_download
+          path: html_downloads
+    
+  
+    
+    
