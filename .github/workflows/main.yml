@@ -18,7 +18,7 @@ jobs:
           echo 'And this is the last file' > omega.html
           cd .. 
       - name: Upload artifacts
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-pages-artifact@v1
         with: 
           path: html_downloads
 
